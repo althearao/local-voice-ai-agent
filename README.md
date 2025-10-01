@@ -1,86 +1,95 @@
-# Local Voice AI Agent
+## Installation Instructions (macOS and Windows)
 
-A real-time voice chat application powered by local AI models. This project allows you to have voice conversations with AI models like Gemma running locally on your machine.
+### macOS
 
-## Features
-
-- Real-time speech-to-text conversion
-- Local LLM inference using Ollama
-- Text-to-speech response generation
-- Web interface for interaction
-- Phone number interface option
-
-## Prerequisites
-
-- MacOS
-- [Ollama](https://ollama.ai/) - Run LLMs locally
-- [uv](https://github.com/astral-sh/uv) - Fast Python package installer and resolver
-
-## Installation
-
-### 1. Install prerequisites with Homebrew
-
+1. Open Terminal  
+   - Press Command + Space, type "Terminal", and press Enter.  
+   - You should see something like:  
 ```bash
-brew install ollama
-brew install uv
+     your-mac:~ yourname$
 ```
 
-### 2. Clone the repository
-
+2. Install Homebrew (if you don’t have it already). Inside your terminal window, run:  
 ```bash
-git clone https://github.com/jesuscopado/local-voice-ai-agent.git
-cd local-voice-ai-agent
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### 3. Set up Python environment and install dependencies
-
+3. Install prerequisites with Homebrew. Inside your terminal window, run:  
 ```bash
-uv venv
-source .venv/bin/activate
-uv sync
+   brew install git  
+   brew install uv  
+   brew install python  
+   brew install ollama  
 ```
 
-### 4. Download required models in Ollama
-
+4. Clone this repository. Inside your terminal window, run:  
 ```bash
-ollama pull gemma3:1b
-# For advanced version
-ollama pull gemma3:4b
+   git clone https://github.com/althearao/local-voice-ai-agent.git  
+   cd local-voice-ai-agent  
 ```
+
+5. Set up Python environment and install dependencies. Inside your terminal window, run:  
+```bash
+   uv venv  
+   source .venv/bin/activate  
+   uv sync  
+```
+
+---
+
+### Windows
+
+1. Open PowerShell  
+   - Press Win + S, type "PowerShell", and press Enter.  
+   - You should see something like:  
+```bash
+     PS C:\Users\YourName>
+```
+
+2. Install prerequisites (download from these URLs and install manually):  
+   Git for Windows: https://git-scm.com/download/win  
+   uv installer: https://github.com/astral-sh/uv/releases  
+   Python for Windows: https://www.python.org/downloads/windows/  
+   (during installation make sure to check "Add Python to PATH")  
+   Ollama for Windows: https://ollama.ai/download  
+
+3. Clone this repository. Inside your PowerShell window, run:  
+```bash
+   git clone https://github.com/althearao/local-voice-ai-agent.git  
+   cd local-voice-ai-agent  
+```
+
+4. Set up Python environment and install dependencies. Inside your PowerShell window, run:  
+```bash
+   uv venv  
+   .venv\Scripts\activate  
+   uv sync  
+```
+
+
+### 5. Configure your model
+
+Open text_to_voice.py and edit the code so it calls the name of your Ollama model (default is class_murmur).
+
 
 ## Usage
 
-### Basic Voice Chat
+### text to voice chat
 
 ```bash
-python local_voice_chat.py
+python text_to_voice.py
 ```
-
-### Advanced Voice Chat (with system prompt)
-
-#### Web UI (default)
-```bash
-python local_voice_chat_advanced.py
-```
-
-#### Phone Number Interface
-Get a temporary phone number that anyone can call to interact with your AI:
-```bash
-python local_voice_chat_advanced.py --phone
-```
-
-This will provide you with a temporary phone number that you can call to interact with the AI using your voice.
 
 ## How it works
 
 The application uses:
-- `FastRTC` for WebRTC communication
-- `Moonshine` for local speech-to-text conversion
-- `Kokoro` for text-to-speech synthesis
-- `Ollama` for running local LLM inference with `Gemma` models
 
-When you speak, your audio is:
-1. Transcribed to text using Moonshine
-2. Sent to a local LLM via Ollama for processing
-3. The LLM response is converted back to speech with Kokoro
-4. The audio response is streamed back to you via FastRTC
+- `Kokoro` for text-to-speech synthesis
+- `Ollama` for running local LLM inference with your fine tuned models
+- sounddevice for audio playback
+
+Workflow:
+	1.	You type input into the terminal
+	2.	Input is sent to your local LLM via Ollama
+	3.	The LLM response is converted to speech with Kokoro
+	4.	The audio is played aloud through your speakers
