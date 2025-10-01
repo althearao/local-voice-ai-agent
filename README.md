@@ -67,9 +67,31 @@
 ```
 
 
-### 5. Configure your model
+## Configure your model
 
-Open text_to_voice.py and edit the code so it calls the name of your Ollama model (default is class_murmur).
+You need to tell the program which Ollama model to use.
+
+1. Open the `text_to_voice.py` file in VS Code.  
+   - On macOS, from your terminal window:
+     ```bash
+     code text_to_voice.py
+     ```
+   - On Windows, from your PowerShell window:
+     ```powershell
+     code text_to_voice.py
+     ```
+   *(If `code` doesn’t work, open VS Code manually and drag the file into the editor.)*
+
+2. Go to **line 20**, which looks like this:
+   ```python
+   response = chat(
+       model="class_murmur",  # your local model
+       messages=[{"role": "user", "content": user_input}]
+   )
+
+3. Replace "class_murmur" with the name of the Ollama model you want to use.
+
+4.	Save the file before running the program.
 
 
 ## Usage
