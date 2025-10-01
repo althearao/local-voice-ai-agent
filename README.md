@@ -93,6 +93,30 @@ You need to tell the program which Ollama model to use.
 
 4.	Save the file before running the program.
 
+### Optional: Choose a Kokoro voice
+
+By default, Kokoro uses a built-in voice. You can customize this by editing the `text_to_voice.py` file:
+
+```python
+tts_model = get_tts_model(voice="bf_isabella")  # example: female voice
+```
+Available Kokoro voices:
+
+	•	Female
+	•	af_bella
+	•	af_nicole
+	•	af_sarah
+	•	af_sky
+	•	bf_emma
+	•	bf_isabella
+
+	•	Male
+	•	am_adam
+	•	am_michael
+	•	bm_george
+	•	bm_lewis
+
+Just make sure your save the file before running the program.
 
 ## Usage
 
