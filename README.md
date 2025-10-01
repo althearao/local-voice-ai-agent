@@ -114,10 +114,11 @@ You need to tell the program which Ollama model to use.
   python text_to_voice.py
 ```
 Once running:
-	1.	Type your input into the terminal/PowerShell window after You:
-	2.	The text is sent to your Ollama model
-	3.	The response is printed as text and spoken aloud using Kokoro TTS
-	4.	Press Enter on a blank line to exit the program
+	
+-    1.	Type your input into the terminal/PowerShell window after You:
+-	2.	The text is sent to your Ollama model	
+-    3.	The response is printed as text and spoken aloud using Kokoro TTS	
+-    4.	Press Enter on a blank line to exit the program
 
 
 ## How it works
@@ -129,7 +130,8 @@ The application uses:
 - sounddevice for audio playback
 
 Workflow:
-	1.	You type input into the terminal
-	2.	Input is sent to your local LLM via Ollama
-	3.	The LLM response is converted to speech with Kokoro
-	4.	The audio is played aloud through your speakers
+	
+-    1.	You type input into the terminal	
+-   2.	Input is sent to your local LLM via Ollama	
+-    3.	The LLM response is converted to speech with Kokoro
+-    4.	The audio is played aloud through your speakers
