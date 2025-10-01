@@ -96,11 +96,29 @@ You need to tell the program which Ollama model to use.
 
 ## Usage
 
-### text to voice chat
+### Run the text-to-voice chat
 
+- **On macOS**  
+  Open a new **Terminal**:  
 ```bash
-python text_to_voice.py
+  cd local-voice-ai-agent #navigate to the project folder
+  source .venv/bin/activate #activate your virtual environment
+  python text_to_voice.py
 ```
+
+- **On Windows**  
+  Open PowerShell, navigate to the project folder, activate your virtual environment, then run:
+```bash
+  cd local-voice-ai-agent #navigate to the project folder
+  .venv\Scripts\activate #activate your virtual environment
+  python text_to_voice.py
+```
+Once running:
+	1.	Type your input into the terminal/PowerShell window after You:
+	2.	The text is sent to your Ollama model
+	3.	The response is printed as text and spoken aloud using Kokoro TTS
+	4.	Press Enter on a blank line to exit the program
+
 
 ## How it works
 
