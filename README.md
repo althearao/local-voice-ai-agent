@@ -93,30 +93,6 @@ You need to tell the program which Ollama model to use.
 
 4.	Save the file before running the program.
 
-### Optional: Choose a Kokoro voice
-
-By default, Kokoro uses a built-in voice. You can customize this by editing the `text_to_voice.py` file:
-
-```python
-tts_model = get_tts_model(voice="bf_isabella")  # example: female voice
-```
-Available Kokoro voices:
-
-	•	Female
-	•	af_bella
-	•	af_nicole
-	•	af_sarah
-	•	af_sky
-	•	bf_emma
-	•	bf_isabella
-
-	•	Male
-	•	am_adam
-	•	am_michael
-	•	bm_george
-	•	bm_lewis
-
-Just make sure your save the file before running the program.
 
 ## Usage
 
@@ -125,7 +101,7 @@ Just make sure your save the file before running the program.
 - **On macOS**  
   Open a new **Terminal**:  
 ```bash
-  cd local-voice-ai-agent #navigate to the project folder
+  cd local-voice-ai-agent #navigate to the project folder (you can also drag and drop)
   source .venv/bin/activate #activate your virtual environment
   python text_to_voice.py
 ```
@@ -133,7 +109,7 @@ Just make sure your save the file before running the program.
 - **On Windows**  
   Open PowerShell, navigate to the project folder, activate your virtual environment, then run:
 ```bash
-  cd local-voice-ai-agent #navigate to the project folder
+  cd local-voice-ai-agent #navigate to the project folder (you can also drag and drop)
   .venv\Scripts\activate #activate your virtual environment
   python text_to_voice.py
 ```
