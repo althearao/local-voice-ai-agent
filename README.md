@@ -66,10 +66,18 @@
    uv sync  
 ```
 
+## Run your Ollama model
+
+You need to tell the program which Ollama model to use. Open a new Terminal / Powershell and type:
+
+```bash
+   ollama run mymodel
+```
+If you do not yet have a local Ollama chatbot set up, please refer to this tutorial. https://sjsu.instructure.com/courses/1616480/modules/items/17062651
+
+Once Ollama is running, leave the Terminal / Powershell window open in the background and continue to the next step.
 
 ## Configure your model
-
-You need to tell the program which Ollama model to use.
 
 1. Open the `text_to_voice.py` file in VS Code.  
    - On macOS, from your terminal window:
@@ -115,7 +123,7 @@ You need to tell the program which Ollama model to use.
 ```
 Once running:
 	
--   Type your input into the terminal/PowerShell window after You:
+-   Type your input into the terminal/PowerShell window
 -	The text is sent to your Ollama model	
 -   The response is printed as text and spoken aloud using Kokoro TTS	
 -   Press Enter on a blank line to exit the program
@@ -131,7 +139,7 @@ The application uses:
 
 Workflow:
 	
--  	You type input into the terminal	
+-  You type input into the terminal	
 -   Input is sent to your local LLM via Ollama	
 -   The LLM response is converted to speech with Kokoro
 -   The audio is played aloud through your speakers
