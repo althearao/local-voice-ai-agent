@@ -73,6 +73,8 @@ You need to tell the program which Ollama model to use. Open a new Terminal / Po
 ```bash
    ollama run mymodel
 ```
+Edit mymodel so it matches the name of your chatbot.
+
 If you do not yet have a local Ollama chatbot set up, please refer to this tutorial. https://sjsu.instructure.com/courses/1616480/modules/items/17062651
 
 Once Ollama is running, leave the Terminal / Powershell window open in the background and continue to the next step.
