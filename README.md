@@ -47,13 +47,18 @@
 ```
 
 2. Install prerequisites (download from these URLs and install manually):  
-   Git for Windows: https://git-scm.com/download/win  
-   uv installer: https://github.com/astral-sh/uv/releases  
+   Git for Windows: https://git-scm.com/download/win   
    Python for Windows: https://www.python.org/downloads/windows/  
    (during installation make sure to check "Add Python to PATH")  
    Ollama for Windows: https://ollama.ai/download  
 
-3. Clone this repository. Inside your PowerShell window, run:  
+3. Install UV
+```bash
+   # On Windows.
+   powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+3. Restart Powershell. Then, clone this repository. Inside your PowerShell window, run:  
 ```bash
    git clone https://github.com/althearao/local-voice-ai-agent.git  
    cd local-voice-ai-agent  
