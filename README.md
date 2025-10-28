@@ -58,13 +58,13 @@
    powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
-3. Restart Powershell. Then, clone this repository. Inside your PowerShell window, run:  
+4. Restart Powershell. Then, clone this repository. Inside your PowerShell window, run:  
 ```bash
    git clone https://github.com/althearao/local-voice-ai-agent.git  
    cd local-voice-ai-agent  
 ```
 
-4. Set up Python environment and install dependencies. Inside your PowerShell window, run:  
+5. Set up Python environment and install dependencies. Inside your PowerShell window, run:  
 ```bash
    uv venv  
    .venv\Scripts\activate  
@@ -122,7 +122,7 @@ Once Ollama is running, leave the Terminal / Powershell window open in the backg
 ```
 
 - **On Windows**  
-  Open PowerShell, navigate to the project folder, activate your virtual environment, then run:
+  Open PowerShell, navigate to the project folder, activate your virtual environment, run the script.
 ```bash
   cd local-voice-ai-agent #navigate to the project folder (you can also drag and drop)
   .venv\Scripts\activate #activate your virtual environment
@@ -130,10 +130,10 @@ Once Ollama is running, leave the Terminal / Powershell window open in the backg
 ```
 Once running:
 	
--   Type your input into the terminal/PowerShell window
+-  Type your input into the terminal/PowerShell window
 -	The text is sent to your Ollama model	
--   The response is printed as text and spoken aloud using Kokoro TTS	
--   Press Enter on a blank line to exit the program
+-  The response is printed as text and spoken aloud using Kokoro TTS	
+-  Press Enter on a blank line to exit the program
 
 
 ## How it works
@@ -147,6 +147,6 @@ The application uses:
 Workflow:
 	
 -  You type input into the terminal	
--   Input is sent to your local LLM via Ollama	
--   The LLM response is converted to speech with Kokoro
--   The audio is played aloud through your speakers
+-  Input is sent to your local LLM via Ollama	
+-  The LLM response is converted to speech with Kokoro
+-  The audio is played aloud through your speakers
