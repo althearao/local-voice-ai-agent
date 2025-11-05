@@ -167,7 +167,7 @@ options = KokoroTTSOptions(
 )
 ```
 
-Kokoro has not been trained much on other accents, so you might notice that other accents are spoken in a weired manner.
+Kokoro has not been trained much on other accents, so you might notice that other accents are spoken in a weird manner.
 
 ## How it works
 
