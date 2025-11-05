@@ -135,6 +135,39 @@ Once running:
 -  The response is printed as text and spoken aloud using Kokoro TTS	
 -  Press Enter on a blank line to exit the program
 
+## Using a different voice for chatbot
+
+To use a different voice, uncomment the options variable in `text_to_voice.py` and pass it to the `stream_tts_sync` method like shown below:
+
+```python
+for sample_rate, audio_array in tts_model.stream_tts_sync(response_text, options=options):
+```
+
+You can check out all supported voices at:
+[Supported Voices](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md) and update the voice attribute in the options accordingly.
+
+### Example for using af_nicole voice
+```python
+options = KokoroTTSOptions(
+    voice="af_nicole",
+    speed=1,
+    lang="en-us"
+)
+```
+
+Speed attribute controls how fast or slow the voice speaks. Higher the value, faster the pace of speech.
+
+### Example for using a different accent
+E.g: For Spanish accent, select one of the Spanish voices from the supported voices page and pass the corresponding `voice` and `lang` attribute:
+```python
+options = KokoroTTSOptions(
+    voice="ef_dora",
+    speed=1,
+    lang="es"
+)
+```
+
+Kokoro has not been trained much on other accents, so you might notice that other accents are spoken in a weired manner.
 
 ## How it works
 
