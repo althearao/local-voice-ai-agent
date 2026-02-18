@@ -14,21 +14,47 @@
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-3. Install prerequisites with Homebrew. Inside your terminal window, run:  
+3. Install prerequisites with Homebrew. 
+This project depends on FFmpeg 7 (not FFmpeg 8).
+Newer versions of FFmpeg are not compatible with PyAV 14.x.
+Inside your terminal window, run:  
 ```bash
    brew install git  
    brew install uv  
    brew install python  
-   brew install ollama  
+   brew install ollama
+   brew install ffmpeg@7
+   brew install pkg-config
+   brew install cython  
 ```
 
-4. Clone this repository. Inside your terminal window, run:  
+If you previously installed FFmpeg 8, remove it and use version 7.
+```bash
+brew uninstall ffmpeg
+brew link ffmpeg@7 --force --overwrite
+```
+
+Install Xcode Command Line Tools (Required for C compilation)
+```bash
+xcode-select --install
+```
+If it says already installed, you are good.
+
+4. PyAV requires pkg-config to locate FFmpeg libraries.
+```bash
+export PKG_CONFIG_PATH="/opt/homebrew/opt/ffmpeg@7/lib/pkgconfig"
+echo 'export PKG_CONFIG_PATH="/opt/homebrew/opt/ffmpeg@7/lib/pkgconfig"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+
+5. Clone this repository. Inside your terminal window, run:  
 ```bash
    git clone https://github.com/althearao/local-voice-ai-agent.git  
    cd local-voice-ai-agent  
 ```
 
-5. Set up Python environment and install dependencies. Inside your terminal window, run:  
+6. Set up Python environment and install dependencies. Inside your terminal window, run:  
 ```bash
    uv venv  
    source .venv/bin/activate  
