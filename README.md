@@ -198,7 +198,7 @@ Kokoro has not been trained much on other accents, so you might notice that othe
 
 # Using Speech to Text for Input
 
-In addition to typing input, this project also supports speech input using Moonshine Speech-to-Text (STT).
+In addition to typing input, this project also supports voice input using Moonshine Speech-to-Text (STT).
 
 The following scripts support microphone input:
 
