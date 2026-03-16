@@ -96,6 +96,15 @@ source ~/.zshrc
    .venv\Scripts\activate  
    uv sync  
 ```
+6. Install dependencies:
+```powershell
+pip install sounddevice
+pip install soundfile
+pip install kokoro-onnx
+pip install onnxruntime
+pip install fastrtc
+pip install ollama
+```
 
 ## Run your Ollama model
 
